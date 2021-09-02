@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shop"
         android:usesCleartextTraffic="true"
-        android:networkSecurityConfig="@xml/config_network">
+        android:networkSecurityConfig="@xml/config_network"
+        android:hardwareAccelerated="true">
 
     <activity
             android:name=".activity.BaruActivity"

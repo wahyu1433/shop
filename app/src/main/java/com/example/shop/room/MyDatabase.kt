@@ -8,7 +8,7 @@ import com.example.shop.model.Produk
 
 @Database(entities = [Produk::class] /* List model Ex:NoteModel */, version = 1)
     abstract class MyDatabase : RoomDatabase() {
-        abstract fun DaoKeranjang(): DAOKeranjang
+        abstract fun daoKeranjang(): DAOKeranjang
 
         companion object {
             private var INSTANCE: MyDatabase? = null

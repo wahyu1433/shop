@@ -41,7 +41,7 @@ class BerandaFragment : Fragment() {
 
         val view: View = inflater.inflate(R.layout.fragment_beranda, container, false)
 
-        initview(view)
+        init(view)
         getProduk()
 
 
@@ -107,7 +107,7 @@ class BerandaFragment : Fragment() {
         })
     }
 
-    fun initview(view: View){
+    fun init(view: View){
         vpslider = view.findViewById(R.id.vp_slider)
         rvProduk = view.findViewById(R.id.rv_produk)
         rvProdukTerlaris = view.findViewById(R.id.rv_produk_terlaris)
