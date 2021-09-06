@@ -21,7 +21,7 @@ class KategoriFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_keranjang, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_category, container, false)
         return view
     }
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.example.shop.R
 import com.example.shop.helper.Helper
 import com.example.shop.model.Produk
@@ -34,7 +35,13 @@ class DetailProdukActivity : AppCompatActivity() {
 
     private fun mainButton(){
         btn_keranjang.setOnClickListener{
-            insert()
+            val data = myDb.daoKeranjang().getProduk(produk.id)
+            if (data == null) {
+                insert()
+            } else {
+                data.jumlah += 1
+                update(data)
+            }
         }
 
         btn_favorit.setOnClickListener {
@@ -45,6 +52,8 @@ class DetailProdukActivity : AppCompatActivity() {
                 println(note.harga)
             }
         }
+
+        btn_toKeranjang
     }
 
 
@@ -52,16 +61,28 @@ class DetailProdukActivity : AppCompatActivity() {
 
     private fun insert(){
         val myDb: MyDatabase = MyDatabase.getInstance(this)!! // call database
-        val note = Produk() //create new keranjang
-        note.name = "First Keranjang"
-        note.harga = "10000000"
+//        val note = Produk() //create new keranjang
+//        note.name = "First Keranjang"
+//        note.harga = "10000000"
 
-        CompositeDisposable().add(Observable.fromCallable { myDb.daoKeranjang().insert(note) }
+        CompositeDisposable().add(Observable.fromCallable { myDb.daoKeranjang().insert(produk) }
             .subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
                 checkkeranjang()
                 Log.d("respons", "data inserted")
+                Toast.makeText(this, "Berhasil ditambahkan keranjang", Toast.LENGTH_SHORT).show()
+            })
+    }
+
+    private fun update(data: Produk) {
+        CompositeDisposable().add(Observable.fromCallable { myDb.daoKeranjang().update(data) }
+            .subscribeOn(Schedulers.computation())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
+                checkkeranjang()
+                Log.d("respons", "data inserted")
+                Toast.makeText(this, "Berhasil ditambahkan keranjang", Toast.LENGTH_SHORT).show()
             })
     }
 
@@ -77,7 +98,7 @@ class DetailProdukActivity : AppCompatActivity() {
     }
     private fun getInfo(){
         val data = intent.getStringExtra("extra")
-        val produk = Gson().fromJson(data, Produk::class.java)
+        produk = Gson().fromJson(data, Produk::class.java)
         //val produk = Gson().fromJson<Produk>(data, Produk::class.java)
 
         // set Value

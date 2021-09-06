@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val FragmentBeranda : Fragment = BerandaFragment()
     private val FragmentAkun : Fragment = AkunFragment()
     private val FragmentKategori : Fragment = KategoriFragment()
-    private val FragmentLainnya : Fragment = LainnyaFragment()
+    private val FragmentKeranjang : Fragment = KeranjangFragment()
     private val FM : FragmentManager = supportFragmentManager
     private var active : Fragment = FragmentBeranda
 
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         FM.beginTransaction().add(R.id.container, FragmentBeranda).show(FragmentBeranda).commit()
         FM.beginTransaction().add(R.id.container, FragmentKategori).hide(FragmentKategori).commit()
         FM.beginTransaction().add(R.id.container, FragmentAkun).hide(FragmentAkun).commit()
-        FM.beginTransaction().add(R.id.container, FragmentLainnya).hide(FragmentLainnya).commit()
+        FM.beginTransaction().add(R.id.container, FragmentKeranjang).hide(FragmentKeranjang).commit()
 
         bottomNavigationView = findViewById(R.id.nav_view)
         menu = bottomNavigationView.menu
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.navigation_lainnya->{
 
-                    callfragment(3,FragmentLainnya)
+                    callfragment(3,FragmentKeranjang)
                 }
             }
 

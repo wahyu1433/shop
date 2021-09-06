@@ -18,7 +18,7 @@ import com.example.shop.model.Produk
                     synchronized(MyDatabase::class) {
                         INSTANCE = Room.databaseBuilder(
                             context.applicationContext,
-                            MyDatabase::class.java, "MyDatabase" // Database Name
+                            MyDatabase::class.java, "MyDatabase1" // Database Name
                         ).allowMainThreadQueries().build()
                     }
                 }

@@ -1,216 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#ffff">
+    android:orientation="vertical">
 
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@color/birutua"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="category"
-            android:textAllCaps="true"
-            android:textStyle="bold"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="deskripsi aplikasi category"/>
+            android:layout_centerInParent="true"
+            android:text="Keranjang"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
 
-    <ScrollView
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Select All" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        
-        <androidx.cardview.widget.CardView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_produk"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardCornerRadius="15dp"
-            android:layout_marginTop="20dp">
+            android:layout_height="match_parent"
+            android:layout_above="@+id/div_footer"
+            android:layout_marginHorizontal="15dp" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/orange"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Platform Learning"
-                    android:textColor="#ffff"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_below="@id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
-
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:layout_alignParentRight="true"
-                    android:maxHeight="80dp"
-                    android:src="@drawable/learning" />
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <RelativeLayout
+            android:id="@+id/div_footer"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardCornerRadius="15dp"
-            android:layout_marginTop="20dp">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00A19D"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/title2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Media Pembelajaran"
-                    android:textColor="#ffff"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_below="@id/title2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
-
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:layout_alignParentRight="true"
-                    android:maxHeight="80dp"
-                    android:src="@drawable/mediapembelajaran" />
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardCornerRadius="15dp"
-            android:layout_marginTop="20dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#CCA8E9"
-                android:padding="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/title3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Buku Digital"
-                    android:textColor="#ffff"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_below="@id/title3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
-
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:layout_alignParentRight="true"
-                    android:maxHeight="80dp"
-                    android:src="@drawable/digitalbook" />
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardCornerRadius="15dp"
-            android:layout_marginTop="20dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#364F6B"
-                android:padding="10dp">
+                    android:text="Total" />
 
                 <TextView
-                    android:id="@+id/title4"
+                    android:id="@+id/tv_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Platform Learning"
-                    android:textColor="#ffff"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_below="@id/title4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
+                    android:text="Rp.10.000"
+                    android:textColor="@color/birutua"
+                    android:textSize="16dp" />
 
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:layout_alignParentRight="true"
-                    android:maxHeight="80dp"
-                    android:src="@drawable/learningapp" />
+            </LinearLayout>
 
-            </RelativeLayout>
+            <TextView
+                android:id="@+id/btn_bayar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_btn_beli"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Bayar"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
-        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
 
-        
-    </LinearLayout>
-    </ScrollView>
-
+    </RelativeLayout>
 
 </LinearLayout>
