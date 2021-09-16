@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.shop.R
 import com.example.shop.adapter.AdapterKeranjang
 import com.example.shop.adapter.AdapterProduk
+import com.example.shop.model.Produk
 import com.example.shop.room.MyDatabase
 
 class KeranjangFragment : Fragment() {
@@ -38,6 +39,9 @@ class KeranjangFragment : Fragment() {
         }
     }
 
+
+    lateinit var adapter: AdapterKeranjang
+    var listProduk = ArrayList<Produk>()
     private fun displayProduk(){
 
         //ambil data
@@ -47,7 +51,19 @@ class KeranjangFragment : Fragment() {
         val layoutmanager = LinearLayoutManager(activity)
         layoutmanager.orientation = LinearLayoutManager.VERTICAL
 
-        rvProduk.adapter = AdapterKeranjang(requireActivity(),listProduk)
+        rvProduk.adapter = AdapterKeranjang(requireActivity(),listProduk, object : AdapterKeranjang.Listeners{
+            override fun onUpdate() {
+
+            }
+
+            override fun onDelete(position: Int) {
+
+            }
+
+            override fun onDelete() {
+
+            }
+        })
         rvProduk.layoutManager = layoutmanager
     }
 

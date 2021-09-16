@@ -1,5 +1,6 @@
 package com.example.shop.app
 
+import com.example.shop.util.Config
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -9,7 +10,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiConfig {
 
-    private const val BASE_URL = "http://192.168.43.182/shop/public/api/"
+    private const val BASE_URL = Config.baseUrl+"api/"
     private val client: Retrofit
         get() {
             val gson = GsonBuilder()

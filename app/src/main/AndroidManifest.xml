@@ -37,6 +37,8 @@
         <activity android:name=".activity.MasukActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.DetailProdukActivity" />
+        <activity android:name=".activity.PagerActivity" />
+        <activity android:name=".activity.Pager2Activity" />
     </application>
 
 </manifest>

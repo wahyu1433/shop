@@ -37,6 +37,7 @@
         android:orientation="vertical">
         
         <androidx.cardview.widget.CardView
+            android:id="@+id/category_1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             app:cardCornerRadius="15dp"
@@ -80,6 +81,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/category_2"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             app:cardCornerRadius="15dp"
@@ -99,7 +101,7 @@
                     android:layout_marginTop="10dp"
                     android:text="Media Pembelajaran"
                     android:textColor="#ffff"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_below="@id/title2"
@@ -123,6 +125,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/category_3"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             app:cardCornerRadius="15dp"
@@ -166,6 +169,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/category_4"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             app:cardCornerRadius="15dp"
@@ -183,9 +187,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="Platform Learning"
+                    android:text="Aplikasi Pembelajaran"
                     android:textColor="#ffff"
-                    android:textSize="24sp"
+                    android:textSize="21sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_below="@id/title4"

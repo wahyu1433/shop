@@ -1,14 +1,17 @@
 package com.example.shop.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.example.shop.R
 import com.example.shop.helper.Helper
 import com.example.shop.model.Produk
 import com.example.shop.room.MyDatabase
+import com.example.shop.util.Config
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 import io.reactivex.Observable
@@ -53,7 +56,12 @@ class DetailProdukActivity : AppCompatActivity() {
             }
         }
 
-        btn_toKeranjang
+        btn_toKeranjang.setOnClickListener {
+            val intent = Intent("event: keranjang")
+            LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+            onBackPressed()
+//            Log.d("responsnya", "tesssssssssssssssssssss")
+        }
     }
 
 
@@ -106,7 +114,7 @@ class DetailProdukActivity : AppCompatActivity() {
         tv_harga.text = Helper().gantiRupiah(produk.harga)
         tv_deskripsi.text = produk.deskripsi
 
-        val img = "http://192.168.43.182/shop/public/storage/produk/" + produk.image
+        val img = Config.productUrl + produk.image
         Picasso.get()
             .load(img)
             .placeholder(R.drawable.product)
@@ -116,5 +124,10 @@ class DetailProdukActivity : AppCompatActivity() {
 
         // setToolbar
 //        Helper().setToolbar(this, toolbar, produk.name)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }

@@ -14,6 +14,7 @@ import com.example.shop.R
 import com.example.shop.activity.DetailProdukActivity
 import com.example.shop.helper.Helper
 import com.example.shop.model.Produk
+import com.example.shop.util.Config
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 
@@ -36,7 +37,7 @@ class AdapterProduk(var activity: Activity, var data: ArrayList<Produk>):Recycle
         holder.tvNama.text = data[position].name.toString()
         holder.tvHarga.text = Helper().gantiRupiah(data[position].harga)
 //        holder.imgGambar.setImageResource(data[position].image)
-        val image = "http://192.168.43.182/shop/public/storage/produk/" + data[position].image
+        val image = Config.productUrl + data[position].image
         Picasso.get()
             .load(image)
             .placeholder(R.drawable.product)

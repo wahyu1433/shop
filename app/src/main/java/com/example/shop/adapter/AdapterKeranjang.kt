@@ -16,6 +16,7 @@ import com.example.shop.activity.DetailProdukActivity
 import com.example.shop.helper.Helper
 import com.example.shop.model.Produk
 import com.example.shop.room.MyDatabase
+import com.example.shop.util.Config
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 import io.reactivex.Observable
@@ -23,7 +24,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>):RecyclerView.Adapter<AdapterKeranjang.Holder>() {
+class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>, var listener: Listeners):RecyclerView.Adapter<AdapterKeranjang.Holder>() {
 
     class Holder(view: View):RecyclerView.ViewHolder(view){
         val tvNama = view.findViewById<TextView>(R.id.tv_nama)
@@ -65,7 +66,7 @@ class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>):Recy
             update(produk)
         }
 
-        val image = "http://192.168.43.182/shop/public/storage/produk/" + data[position].image
+        val image = Config.productUrl + data[position].image
         Picasso.get()
             .load(image)
             .placeholder(R.drawable.product)
@@ -94,15 +95,19 @@ class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>):Recy
         }
 
         holder.btnDelete.setOnClickListener {
+
             delete(produk)
+            notifyItemRemoved(position)
+
 //            listener.onDelete(position)
         }
     }
 
-//    interface Listeners {
-//        fun onUpdate()
-//        fun onDelete(position: Int)
-//    }
+    interface Listeners {
+        fun onUpdate()
+        fun onDelete(position: Int)
+        fun onDelete()
+    }
 
     private fun update(data: Produk) {
         val myDb = MyDatabase.getInstance(activity)
@@ -110,7 +115,7 @@ class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>):Recy
             .subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
-//                listener.onUpdate()
+                listener.onUpdate()
             })
     }
 
@@ -120,6 +125,7 @@ class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>):Recy
             .subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
+                listener.onDelete()
             })
     }
 
