@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.shop.MainActivity
 import com.example.shop.R
@@ -21,6 +22,7 @@ class AkunFragment : Fragment() {
     lateinit var tvNama: TextView
     lateinit var tvEmail: TextView
     lateinit var tvPhone: TextView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +39,13 @@ class AkunFragment : Fragment() {
         btnlogout.setOnClickListener{
             s.setStatusLogin(false)
         }
+
+//        ubahprofile.setOnClickListener {
+////            val profile = Intent(context, GantiPasswordFragment::class.java)
+////            startActivity(profile)
+//        }
+
+
 
         return view
     }

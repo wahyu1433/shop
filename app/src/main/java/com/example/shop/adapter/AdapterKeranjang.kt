@@ -97,16 +97,13 @@ class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>, var 
         holder.btnDelete.setOnClickListener {
 
             delete(produk)
-            notifyItemRemoved(position)
-
-//            listener.onDelete(position)
+            listener.onDelete(position)
         }
     }
 
     interface Listeners {
         fun onUpdate()
         fun onDelete(position: Int)
-        fun onDelete()
     }
 
     private fun update(data: Produk) {
@@ -125,7 +122,7 @@ class AdapterKeranjang(var activity: Activity, var data: ArrayList<Produk>, var 
             .subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
-                listener.onDelete()
+
             })
     }
 

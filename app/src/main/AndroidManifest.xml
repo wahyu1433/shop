@@ -6,25 +6,23 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/config_network"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shop"
-        android:usesCleartextTraffic="true"
-        android:networkSecurityConfig="@xml/config_network"
-        android:hardwareAccelerated="true">
-
-    <activity
+        android:usesCleartextTraffic="true">
+        <activity
             android:name=".activity.BaruActivity"
             android:exported="true" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".activity.MainActivity"-->
-<!--            android:exported="true"-->
-<!--            android:label="@string/title_activity_main" />-->
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".activity.MainActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="@string/title_activity_main" /> -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

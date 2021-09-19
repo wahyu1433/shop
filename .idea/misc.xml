@@ -7,6 +7,7 @@
         <entry key="..\:/Shop/app/src/main/res/drawable-v24/outline_more_horiz_24.xml" value="0.2203125" />
         <entry key="..\:/Shop/app/src/main/res/drawable/bg_btn_beli.xml" value="0.1125" />
         <entry key="..\:/Shop/app/src/main/res/drawable/bg_btn_keranjang.xml" value="0.2203125" />
+        <entry key="..\:/Shop/app/src/main/res/drawable/bg_btn_submit.xml" value="0.16302083333333334" />
         <entry key="..\:/Shop/app/src/main/res/drawable/bg_bulet.xml" value="0.1125" />
         <entry key="..\:/Shop/app/src/main/res/drawable/border.xml" value="0.196875" />
         <entry key="..\:/Shop/app/src/main/res/drawable/border50.xml" value="0.18802083333333333" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Shop/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2203125" />
         <entry key="..\:/Shop/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Shop/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2203125" />
+        <entry key="..\:/Shop/app/src/main/res/layout/activity_change_password.xml" value="0.5" />
         <entry key="..\:/Shop/app/src/main/res/layout/activity_detail_produk.xml" value="0.23485784919653893" />
         <entry key="..\:/Shop/app/src/main/res/layout/activity_login.xml" value="0.31338028169014087" />
         <entry key="..\:/Shop/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -28,11 +30,13 @@
         <entry key="..\:/Shop/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Shop/app/src/main/res/layout/bg_bulet.xml" value="0.1" />
         <entry key="..\:/Shop/app/src/main/res/layout/blank.xml" value="0.10416666666666667" />
+        <entry key="..\:/Shop/app/src/main/res/layout/change_profile.xml" value="0.25" />
         <entry key="..\:/Shop/app/src/main/res/layout/craftivity.xml" value="0.20416666666666666" />
         <entry key="..\:/Shop/app/src/main/res/layout/fragment_akun.xml" value="0.22" />
         <entry key="..\:/Shop/app/src/main/res/layout/fragment_beranda.xml" value="0.22" />
         <entry key="..\:/Shop/app/src/main/res/layout/fragment_category.xml" value="0.33" />
         <entry key="..\:/Shop/app/src/main/res/layout/fragment_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/Shop/app/src/main/res/layout/fragment_ganti_password.xml" value="0.20416666666666666" />
         <entry key="..\:/Shop/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Shop/app/src/main/res/layout/fragment_home2.xml" value="0.20416666666666666" />
         <entry key="..\:/Shop/app/src/main/res/layout/fragment_keranjang.xml" value="0.5" />
