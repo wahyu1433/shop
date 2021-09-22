@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="deskripsi aplikasi category"/>
+            android:text="Beberapa macam kategori yang ada di DLI "/>
 
     </LinearLayout>
 
@@ -59,15 +59,16 @@
                     android:textColor="#ffff"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:layout_below="@id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/title"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
+                    android:text="Memudahkan dalam ruang belajar \n dan materi untuk belajar"
+                    android:textColor="#ffff" />
 
                 <ImageView
                     android:layout_width="110dp"
@@ -103,15 +104,16 @@
                     android:textColor="#ffff"
                     android:textSize="22sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:layout_below="@id/title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/title2"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
+                    android:text="Informasi dalam proses belajar \nmengajar sehingga dapat meningkatkan \nminat belajar"
+                    android:textColor="#ffff" />
 
                 <ImageView
                     android:layout_width="110dp"
@@ -147,15 +149,16 @@
                     android:textColor="#ffff"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:layout_below="@id/title3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/title3"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
+                    android:text="Untuk mendukung Pembelajaran\nJarak Jauh "
+                    android:textColor="#ffff" />
 
                 <ImageView
                     android:layout_width="110dp"
@@ -191,15 +194,16 @@
                     android:textColor="#ffff"
                     android:textSize="21sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:layout_below="@id/title4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/title4"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="3dp"
-                    android:text="ini adalah aplikasi edukasi yanf  \ndapat memberikan solusi"
-                    android:textColor="#ffff"/>
+                    android:text="Mengedukasi melalui aplikasi\nyang berbasis online"
+                    android:textColor="#ffff" />
 
                 <ImageView
                     android:layout_width="110dp"

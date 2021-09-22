@@ -1,13 +1,11 @@
 package com.example.shop.app
 
+import com.example.shop.model.Checkout
 import com.example.shop.model.ResponModel
 import okhttp3.Call
 import okhttp3.Response
 import okhttp3.ResponseBody
-import retrofit2.http.POST
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
+import retrofit2.http.*
 
 interface ApiService {
     @FormUrlEncoded
@@ -28,4 +26,21 @@ interface ApiService {
 
     @GET("produk")
     fun getProduk():retrofit2.Call<ResponModel>
+
+
+    //mulai dari sini
+    @POST("Checkout")
+    fun checkout(
+        @Body data: Checkout
+    ):retrofit2.Call<ResponModel>
+
+    @GET("checkout/user/{id}")
+    fun getRiwayat(
+        @Path("id") id: Int
+    ): retrofit2.Call<ResponModel>
+
+    @POST("checkout/batal/{id}")
+    fun batalCheckout(
+        @Path("id") id: Int
+    ): retrofit2.Call<ResponModel>
 }

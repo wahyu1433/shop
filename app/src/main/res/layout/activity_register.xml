@@ -32,11 +32,11 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="atau register dengan" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="sans-serif"-->
+<!--                android:text="atau register dengan" />-->
         </LinearLayout>
 
 
@@ -46,75 +46,77 @@
             android:orientation="horizontal">
 
 
-            <RelativeLayout
-                android:id="@+id/btn_google"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_rounded_2"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:padding="13dp">
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/btn_google"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/btn_rounded_2"-->
+<!--                android:foreground="?android:attr/selectableItemBackground"-->
+<!--                android:padding="13dp">-->
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    app:srcCompat="@drawable/google" />
+<!--                <ImageView-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    app:srcCompat="@drawable/google" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginLeft="100dp"
-                    android:text="Google"
-                    android:textColor="#000000" />
-            </RelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_marginLeft="100dp"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:text="Google"-->
+<!--                    android:textColor="#000000" />-->
+<!--            </RelativeLayout>-->
 
-            <RelativeLayout
-                android:id="@+id/btn_apple"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_rounded_2"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:padding="13dp">
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/btn_apple"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/btn_rounded_2"-->
+<!--                android:foreground="?android:attr/selectableItemBackground"-->
+<!--                android:padding="13dp">-->
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    app:srcCompat="@drawable/apple" />
+<!--                <ImageView-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    app:srcCompat="@drawable/apple" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="Apple"
-                    android:textColor="#000000" />
-            </RelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:text="Apple"-->
+<!--                    android:textColor="#000000" />-->
+<!--            </RelativeLayout>-->
 
-            <RelativeLayout
-                android:id="@+id/btn_facebook"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_rounded_2"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:padding="13dp">
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/btn_facebook"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/btn_rounded_2"-->
+<!--                android:foreground="?android:attr/selectableItemBackground"-->
+<!--                android:padding="13dp">-->
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    app:srcCompat="@drawable/facebook" />
+<!--                <ImageView-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    app:srcCompat="@drawable/facebook" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="facebook"
-                    android:textColor="#000000" />
-            </RelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:text="facebook"-->
+<!--                    android:textColor="#000000" />-->
+<!--            </RelativeLayout>-->
 
         </LinearLayout>
 

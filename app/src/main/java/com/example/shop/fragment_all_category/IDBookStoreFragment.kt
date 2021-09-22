@@ -23,8 +23,6 @@ import kotlinx.android.synthetic.main.fragment_category.*
 class IDBookStoreFragment : Fragment() {
 
 
-    lateinit var bottomnav : BottomNavigationView
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

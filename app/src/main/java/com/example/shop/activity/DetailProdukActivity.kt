@@ -123,7 +123,7 @@ class DetailProdukActivity : AppCompatActivity() {
             .into(image)
 
         // setToolbar
-//        Helper().setToolbar(this, toolbar, produk.name)
+        Helper().setToolbar(this, toolbar, produk.name)
     }
 
     override fun onSupportNavigateUp(): Boolean {

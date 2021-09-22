@@ -27,7 +27,7 @@ class BerandaFragment : Fragment() {
     lateinit var vpslider: ViewPager
     lateinit var rvProduk: RecyclerView
     lateinit var rvProdukTerlaris: RecyclerView
-    lateinit var rvProdukElektronik: RecyclerView
+//    lateinit var rvProdukElektronik: RecyclerView
 
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
@@ -77,8 +77,8 @@ class BerandaFragment : Fragment() {
         rvProdukTerlaris.adapter = AdapterProduk(requireActivity(),listProduk)
         rvProdukTerlaris.layoutManager = layoutmanager1
 
-        rvProdukElektronik.adapter = AdapterProduk(requireActivity(),listProduk)
-        rvProdukElektronik.layoutManager = layoutmanager2
+//        rvProdukElektronik.adapter = AdapterProduk(requireActivity(),listProduk)
+//        rvProdukElektronik.layoutManager = layoutmanager2
 
     }
 
@@ -111,7 +111,7 @@ class BerandaFragment : Fragment() {
         vpslider = view.findViewById(R.id.vp_slider)
         rvProduk = view.findViewById(R.id.rv_produk)
         rvProdukTerlaris = view.findViewById(R.id.rv_produk_terlaris)
-        rvProdukElektronik = view.findViewById(R.id.rv_produk_elektronik)
+//        rvProdukElektronik = view.findViewById(R.id.rv_produk_elektronik)
     }
 
 //    val arrProduk: ArrayList<Produk>get(){

@@ -1,5 +1,6 @@
 package com.example.shop.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shop.R
+import com.example.shop.activity.MasukActivity
 import com.example.shop.adapter.AdapterKeranjang
 import com.example.shop.adapter.AdapterProduk
 import com.example.shop.helper.Helper
@@ -44,7 +46,14 @@ class KeranjangFragment : Fragment() {
 
         }
         btnBayar.setOnClickListener {
-
+            if (s.getstatuslogin()) {
+                var isThereProduk = false
+                for (p in listProduk) {
+                    if (p.selected) isThereProduk = true
+                }
+            } else {
+                requireActivity().startActivity(Intent(requireActivity(), MasukActivity::class.java))
+            }
         }
         cball.setOnClickListener {
             for(i in listProduk.indices){

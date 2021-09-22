@@ -11,6 +11,7 @@ import androidx.fragment.app.replace
 import com.example.shop.MainActivity
 import com.example.shop.R
 import com.example.shop.activity.Pager2Activity
+import com.example.shop.activity.Pager3Activity
 import com.example.shop.activity.PagerActivity
 import com.example.shop.fragment_all_category.Category1Fragment
 import com.example.shop.fragment_all_category.IDBookStoreFragment
@@ -78,13 +79,16 @@ class KategoriFragment : Fragment() {
 //            val transaction = requireActivity().supportFragmentManager.beginTransaction()
 //            transaction.replace(R.id.container, IDBookStoreFragment()).addToBackStack(null)
 //            transaction.commit()
-            val nav: BottomNavigationView = requireActivity().findViewById(R.id.nav_view)
-            val idbookstore = IDBookStoreFragment()
-            fragmentManager?.beginTransaction()?.apply {
-                replace(R.id.container, idbookstore, IDBookStoreFragment::class.java.simpleName)
-                    .addToBackStack(null)
-                    .commit()
-                nav.visibility = View.GONE
+//            val nav: BottomNavigationView = requireActivity().findViewById(R.id.nav_view)
+//            val idbookstore = IDBookStoreFragment()
+//            fragmentManager?.beginTransaction()?.apply {
+//                replace(R.id.container, idbookstore, IDBookStoreFragment::class.java.simpleName)
+//                    .addToBackStack(null)
+//                    .commit()
+//                nav.visibility = View.GONE
+
+            val intent = Intent(activity, Pager3Activity::class.java)
+            startActivity(intent)
 
 
             }
@@ -98,4 +102,4 @@ class KategoriFragment : Fragment() {
         }
 
 
-    }}
+    }

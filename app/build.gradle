@@ -80,7 +80,9 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:2.2.5"
 
     // sweet Alert
+//        implementation 'com.github.thomper:sweet-alert-dialog:1.4.0'
 //    implementation 'com.github.thomper:sweet-alert-dialog:1.4.0'
+
 
     //firebase
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
@@ -94,6 +96,9 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
     implementation "androidx.room:room-runtime:2.2.5"
     annotationProcessor "androidx.room:room-compiler:2.2.5"
+
+
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
 
 
 }
